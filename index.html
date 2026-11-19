@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#07101e"><title>Six Smooth Details — Part 4</title><link rel="stylesheet" href="styles.css"></head>
+<body><main class="app">
+<header><div class="logo">✳ MOTION / INTERFACE</div><span>PART 4 · 6 NEW DETAILS</span></header>
+<section class="intro"><small>MICRO-INTERACTIONS / SLOW MOTION</small><h1>More smooth details,<br><em>in slow-mo.</em></h1><p>Six tiny motion decisions that make interfaces feel responsive, tactile and alive.</p></section>
+<nav class="tabs">
+<button class="active" data-demo="rating"><b>01</b> Rating</button><button data-demo="otp"><b>02</b> One-time code</button><button data-demo="accordion"><b>03</b> Accordion</button><button data-demo="password"><b>04</b> Password</button><button data-demo="todo"><b>05</b> To-do</button><button data-demo="reactions"><b>06</b> Reactions</button>
+</nav>
+<section class="panel">
+<div class="panel-head"><div><small id="number">01 · STAR RATING</small><h2 id="heading">Fill them in <em>turn.</em></h2><p id="desc">Stars fill one after another, with a small stagger between each one.</p></div><span class="slow">SLOW-MO ×½</span></div>
+<div class="stage">
+<div class="scene show" id="rating">
+<div class="widget rating"><div class="stars" id="stars" aria-label="Rate this experience"><button aria-label="1 star">☆</button><button aria-label="2 stars">☆</button><button aria-label="3 stars">☆</button><button aria-label="4 stars">☆</button><button aria-label="5 stars">☆</button></div><p id="ratingThanks">Tap a star to rate</p></div>
+<div class="graph"><small>STAR SCALE</small><svg viewBox="0 0 500 145"><path class="gridline" d="M0 112H500M0 55H500"/><path class="curve" d="M0 135H140 C170 135 175 25 225 25 S275 65 315 65 S370 45 410 45 S460 50 500 50"/></svg><small class="timing">TIME · 800 ms</small></div><b class="metric">4 STARS · 100 ms APART</b>
+</div>
+<div class="scene" id="otp">
+<div class="widget otp"><div class="label">From Messages <span>482917</span></div><div class="digits" id="digits"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"><input maxlength="1" inputmode="numeric"></div><div class="verified" id="verified">✓ Verified</div></div>
+<div class="graph"><small>DIGIT SCALE</small><svg viewBox="0 0 500 145"><path class="gridline" d="M0 112H500M0 55H500"/><path class="curve" d="M0 135 C30 135 35 22 85 22 S125 62 170 62 S220 45 260 45 S315 48 360 48 S430 48 500 48"/></svg><small class="timing">TIME · 700 ms</small></div><b class="metric">6 DIGITS · 70 ms APART</b>
+</div>
+<div class="scene" id="accordion">
+<div class="widget accordions">
+<div class="acc open"><button class="acc-trigger"><span>Shipping</span><i>⌄</i></button><div class="acc-content"><span></span><span></span><span></span></div></div>
+<div class="acc"><button class="acc-trigger"><span>Returns</span><i>⌄</i></button><div class="acc-content"><span></span><span></span></div></div>
+<div class="acc"><button class="acc-trigger"><span>Warranty</span><i>⌄</i></button><div class="acc-content"><span></span><span></span></div></div>
+</div>
+<div class="graph"><small>PANEL HEIGHT</small><svg viewBox="0 0 500 145"><path class="gridline" d="M0 112H500M0 55H500"/><path class="curve" d="M0 135 C35 135 40 30 100 30 S150 68 205 68 S270 68 320 68 H500"/></svg><small class="timing">TIME · 600 ms</small></div><b class="metric">ARROW 180° · OPENS 62 px</b>
+</div>
+<div class="scene" id="password">
+<div class="widget password"><label for="pass">Create password</label><input id="pass" type="password" placeholder="Enter a password"><div class="strength"><span></span><span></span><span></span><span></span></div><div class="strength-row"><b id="strengthText">Too short</b><small id="count">0 chars</small></div></div>
+<div class="graph"><small>STRENGTH SCALE</small><svg viewBox="0 0 500 145"><path class="gridline" d="M0 112H500M0 55H500"/><path class="curve" d="M0 135H80 Q100 135 115 115 T160 90 T210 65 T260 55 T320 35 T390 25 H500"/></svg><small class="timing">TIME · 1000 ms</small></div><b class="metric">4 SEGMENTS · RED → BLUE</b>
+</div>
+<div class="scene" id="todo">
+<div class="widget todo">
+<label class="task"><input type="checkbox"><span>Book the flight</span></label><label class="task"><input type="checkbox"><span>Call the bank</span></label><label class="task"><input type="checkbox"><span>Ship the update</span></label>
+</div>
+<div class="graph"><small>ROW + STRIKE</small><svg viewBox="0 0 500 145"><path class="gridline" d="M0 112H500M0 55H500"/><path class="curve" d="M0 135H140 C180 135 185 135 220 95 S270 25 330 25 H500"/></svg><small class="timing">TIME · 470 ms</small></div><b class="metric">CHECK + STRIKE 470 ms</b>
+</div>
+<div class="scene" id="reactions">
+<div class="widget reaction-widget"><div class="bubble" id="bubble"><button>❤️</button><button>😂</button><button>👏</button><button>🔥</button><button>😍</button><button>🎉</button></div><div class="message">That launch was amazing!</div><small>Hover or tap a reaction</small></div>
+<div class="graph"><small>REACTION SCALE</small><svg viewBox="0 0 500 145"><path class="gridline" d="M0 112H500M0 55H500"/><path class="curve" d="M0 135H80 C110 135 100 30 150 30 S190 15 230 15 S270 75 320 75 S370 80 410 80 S460 90 500 90"/></svg><small class="timing">TIME · 700 ms</small></div><b class="metric">HOVER 1.6× · 70 ms APART</b>
+</div>
+</div>
+<div class="foot"><span id="hint">Tap a star to see each one fill in sequence.</span><button id="replay">↻ Replay animation</button></div>
+</section>
+<section class="outro"><small>PART 4 · SIX NEW DETAILS</small><h2>Small motion.<br><em>Clear feedback.</em></h2><p>Stagger the stars · glow the code · grow the panel · grade the password · strike the task · pop the reaction.</p></section>
+<footer><span>DESIGNED FOR THE DETAILS</span><span>HTML · CSS · JAVASCRIPT</span></footer>
+</main><script src="app.js"></script></body></html>
